@@ -97,9 +97,16 @@
             </div>
         </div>
 
+        <div class="d-flex gap-2 mb-4 overflow-auto pb-2">
+            <button class="btn btn-danger active" onclick="filterSelection('all')">Semua</button>
+            <button class="btn btn-outline-danger" onclick="filterSelection('imm')">IMM</button>
+            <button class="btn btn-outline-danger" onclick="filterSelection('kemuhammadiyahan')">Kemuhammadiyahan</button>
+            <button class="btn btn-outline-danger" onclick="filterSelection('umum')">Umum</button>
+        </div>
+
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
             
-            <div class="col">
+            <div class="col filter-item imm">
                 <div class="card h-100 book-card shadow-sm">
                     <img src="IMM Untuk kemanusiaan.jpg" class="card-img-top book-cover" alt="Buku 1">
                     <div class="card-body d-flex flex-column">
@@ -110,41 +117,92 @@
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col filter-item imm">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="https://via.placeholder.com/300x450/555/fff?text=Cover+2" class="card-img-top book-cover" alt="Buku 2">
+                    <img src="Imm autentik.jpg" class="card-img-top book-cover" alt="Buku 2">
                     <div class="card-body d-flex flex-column">
-                        <h6 class="card-title fw-bold">Filsafat Pendidikan</h6>
-                        <p class="card-text text-muted small mb-3">Prof. Imam</p>
-                        <a href="#" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                        <h6 class="card-title fw-bold">IMM Autentik</h6>
+                        <p class="card-text text-muted small mb-3">Ahmad Sholeh</p>
+                        <a href="https://drive.google.com/file/d/1YGABZ98Je_H4d9GjQr-pBlBcuFCn2ixv/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
                     </div>
                 </div>
             </div>
             
-             <div class="col">
+             <div class="col filter-item imm">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="https://via.placeholder.com/300x450/777/fff?text=Cover+3" class="card-img-top book-cover" alt="Buku 3">
+                    <img src="Tak sekadar merah MIM.jpg" class="card-img-top book-cover" alt="Buku 3">
                     <div class="card-body d-flex flex-column">
-                        <h6 class="card-title fw-bold">Manifesto Gerakan</h6>
-                        <p class="card-text text-muted small mb-3">Tim Riset</p>
-                        <a href="#" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                        <h6 class="card-title fw-bold">Tak Sekedar Merah</h6>
+                        <p class="card-text text-muted small mb-3">MIM Indigenous School</p>
+                        <a href="https://drive.google.com/file/d/1kRaLPKiaI-VtJP4k1s_spFg9Jd5cl9TZ/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col filter-item imm">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="https://via.placeholder.com/300x450/999/fff?text=Cover+4" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Manifesto intelektual.jpeg" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
-                        <h6 class="card-title fw-bold">Etika Politik</h6>
-                        <p class="card-text text-muted small mb-3">Buya Syafii</p>
-                        <a href="#" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                        <h6 class="card-title fw-bold">Manifesto Gerakan Intelektual Profetik</h6>
+                        <p class="card-text text-muted small mb-3">M Abdul Halim Sani</p>
+                        <a href="https://drive.google.com/file/d/1XbZbuanx8lHK8gpI3HEu4Gm1QgHktIfT/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
                     </div>
                 </div>
             </div>
 
         </div>
     </main>
+
+    <script>
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filter-item");
+      if (c == "all") c = "";
+      
+      // Loop semua buku
+      for (i = 0; i < x.length; i++) {
+        removeClass(x[i], "d-none"); // Munculkan dulu semua
+        if (x[i].className.indexOf(c) == -1) {
+             addClass(x[i], "d-none"); // Sembunyikan yang tidak cocok
+        }
+      }
+      
+      // Update warna tombol aktif
+      var btns = document.getElementsByTagName("button");
+      for (i = 0; i < btns.length; i++) {
+          if(btns[i].hasAttribute('onclick')) {
+            btns[i].classList.remove("btn-danger");
+            btns[i].classList.add("btn-outline-danger");
+            btns[i].classList.remove("active");
+          }
+      }
+      // Warnai tombol yang diklik
+      event.target.classList.remove("btn-outline-danger");
+      event.target.classList.add("btn-danger");
+      event.target.classList.add("active");
+    }
+
+    function addClass(element, name) {
+      var arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (var i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+
+    function removeClass(element, name) {
+      var arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (var i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+</script>
 
     <footer class="bg-dark text-white text-center py-3 mt-auto">
         <div class="container">
