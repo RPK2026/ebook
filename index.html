@@ -82,19 +82,19 @@
     </nav>
 
     <header class="banner-container">
-        <img src="spanduk.png" 
+        <img src="Images/spanduk.png" 
              alt="Banner Perpustakaan IMM" 
              class="banner-img">
     </header>
 
     <main class="container my-5">
         
-        <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
             <h3 class="fw-bold mb-0 border-start border-4 border-danger ps-3">Daftar Buku</h3>
-            
-            <div class="d-none d-md-block">
-                <input type="text" class="form-control rounded-pill px-3" placeholder="Cari buku...">
-            </div>
+    
+             <div class="mt-3 mt-md-0">
+                 <input type="text" id="searchInput" onkeyup="searchBooks()" class="form-control rounded-pill px-3" placeholder="Cari buku...">
+             </div>
         </div>
 
         <div class="d-flex gap-2 mb-4 overflow-auto pb-2">
@@ -102,14 +102,14 @@
             <button class="btn btn-outline-danger" onclick="filterSelection('islam')">Islam</button>
             <button class="btn btn-outline-danger" onclick="filterSelection('muhammadiyah')">Muhammadiyah</button>
             <button class="btn btn-outline-danger" onclick="filterSelection('imm')">IMM</button>
-            <button class="btn btn-outline-danger" onclick="filterSelection('wacana-hukum')">Umum</button>
+            <button class="btn btn-outline-danger" onclick="filterSelection('umum')">Umum</button>
         </div>
 
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
             
             <div class="col filter-item imm">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="IMM Untuk kemanusiaan.jpg" class="card-img-top book-cover" alt="Buku 1">
+                    <img src="Images/IMM Untuk kemanusiaan.jpg" class="card-img-top book-cover" alt="Buku 1">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">IMM Untuk Kemanusiaan</h6>
                         <p class="card-text text-muted small mb-3">Amirullah</p>
@@ -120,7 +120,7 @@
 
             <div class="col filter-item imm">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Imm autentik.jpg" class="card-img-top book-cover" alt="Buku 2">
+                    <img src="Images/Imm autentik.jpg" class="card-img-top book-cover" alt="Buku 2">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">IMM Autentik</h6>
                         <p class="card-text text-muted small mb-3">Ahmad Sholeh</p>
@@ -131,7 +131,7 @@
             
              <div class="col filter-item imm">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Tak sekadar merah MIM.jpeg" class="card-img-top book-cover" alt="Buku 3">
+                    <img src="Images/Tak sekadar merah MIM.jpeg" class="card-img-top book-cover" alt="Buku 3">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Tak Sekedar Merah</h6>
                         <p class="card-text text-muted small mb-3">MIM Indigenous School</p>
@@ -142,7 +142,7 @@
 
             <div class="col filter-item imm">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Manifesto intelektual.jpeg" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Manifesto intelektual.jpeg" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Manifesto Gerakan Intelektual Profetik</h6>
                         <p class="card-text text-muted small mb-3">M Abdul Halim Sani</p>
@@ -153,7 +153,7 @@
 
             <div class="col filter-item imm">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Melacak Sejarah Kelahiran dan Perkembangan Ikatan.jpeg" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Melacak Sejarah Kelahiran dan Perkembangan Ikatan.jpeg" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Melacak Sejarah Kelahiran dan Perkembangan Ikatan</h6>
                         <p class="card-text text-muted small mb-3">Noor Chozin Agham</p>
@@ -164,7 +164,7 @@
 
             <div class="col filter-item imm">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="menggugat mahasiswa.jpeg" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/menggugat mahasiswa.jpeg" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Menggugat Mahasiswa</h6>
                         <p class="card-text text-muted small mb-3">Ridho Abdillah</p>
@@ -175,7 +175,7 @@
 
             <div class="col filter-item imm">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Rekontektualisasi Gerakan di Era Digital.jpeg" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Rekontektualisasi Gerakan di Era Digital.jpeg" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Rekontektualisasi Gerakan di Era Digital</h6>
                         <p class="card-text text-muted small mb-3">Ridho Abdillah</p>
@@ -186,7 +186,7 @@
 
             <div class="col filter-item islam ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Bela Islam atau Bela Oligarki.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Bela Islam atau Bela Oligarki.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Bela Islam atau Bela Oligarki</h6>
                         <p class="card-text text-muted small mb-3">Anto Sangadji</p>
@@ -197,7 +197,7 @@
 
             <div class="col filter-item islam ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Demokrasi Madinah Model Demokrasi Cara Rasulullah.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Demokrasi Madinah Model Demokrasi Cara Rasulullah.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Demokrasi Madinah Model Demokrasi Cara Rasulullah</h6>
                         <p class="card-text text-muted small mb-3">Mohammad Shoelh</p>
@@ -208,7 +208,7 @@
 
             <div class="col filter-item islam ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Islam Isme Isme Aliran dan Paham lslam.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Islam Isme Isme Aliran dan Paham lslam.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Islam Isme Isme Aliran dan Paham lslam</h6>
                         <p class="card-text text-muted small mb-3">Anto Sangadji</p>
@@ -219,7 +219,7 @@
 
             <div class="col filter-item islam ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Islam Kiri melawan kapitalisme modal dari wacana menuju gerakan.jpeg" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Islam Kiri melawan kapitalisme modal dari wacana menuju gerakan.jpeg" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Islam Kiri melawan kapitalisme modal dari wacana menuju gerakan</h6>
                         <p class="card-text text-muted small mb-3">Eko Prasetyo</p>
@@ -230,7 +230,7 @@
 
             <div class="col filter-item islam ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Islam Politik suatu Analisis Marxis.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Islam Politik suatu Analisis Marxis.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Islam Politik suatu Analisis Marxis</h6>
                         <p class="card-text text-muted small mb-3">Deepa Kumar</p>
@@ -241,7 +241,7 @@
 
             <div class="col filter-item islam ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Islam Sebagai Ilmu.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Islam Sebagai Ilmu.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Islam Sebagai Ilmu</h6>
                         <p class="card-text text-muted small mb-3">Kuntowijoyo</p>
@@ -252,7 +252,7 @@
 
             <div class="col filter-item islam ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Natsir-Politik santun diantara dua rezim.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Natsir-Politik santun diantara dua rezim.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Politik santun diantara dua rezim</h6>
                         <p class="card-text text-muted small mb-3">Mohammad Natsir</p>
@@ -263,7 +263,7 @@
 
             <div class="col filter-item islam ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Politik Identitas.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Politik Identitas.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Politik Identitas</h6>
                         <p class="card-text text-muted small mb-3">Ahmad Syafii Maarif</p>
@@ -274,7 +274,7 @@
 
             <div class="col filter-item islam ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Teologi Islam Ilmu Tauhid.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Teologi Islam Ilmu Tauhid.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Teologi Islam Ilmu Tauhid</h6>
                         <p class="card-text text-muted small mb-3">Drs. Hadis Purba, MA,</p>
@@ -285,7 +285,7 @@
 
             <div class="col filter-item islam ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Tafsir Al `Usyr Al Akhir.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Tafsir Al `Usyr Al Akhir.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Tafsir Al `Usyr Al Akhir</h6>
                         <p class="card-text text-muted small mb-3">Muhammad Bin Sulaiman</p>
@@ -296,7 +296,7 @@
 
             <div class="col filter-item islam ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Sirah Nabawiyah.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Sirah Nabawiyah.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Sirah Nabawiyah</h6>
                         <p class="card-text text-muted small mb-3">Syaikh Shafiyyurrahman al-Mubarakfuri</p>
@@ -307,7 +307,7 @@
 
             <div class="col filter-item muhammadiyah ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Falsafah ajaran KH. Ahmad Dahlan.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Falsafah ajaran KH. Ahmad Dahlan.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Falsafah ajaran KH. Ahmad Dahlan</h6>
                         <p class="card-text text-muted small mb-3">K.R.H Hadjid</p>
@@ -318,7 +318,7 @@
             
              <div class="col filter-item muhammadiyah ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Ijtihad-Politik-Muhammadiyah.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Ijtihad-Politik-Muhammadiyah.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Ijtihad-Politik-Muhammadiyah</h6>
                         <p class="card-text text-muted small mb-3">Dr.Zuly Qodir</p>
@@ -329,7 +329,7 @@
 
              <div class="col filter-item muhammadiyah ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Muhammadiyah 100 tahun Menyinari Negeri.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Muhammadiyah 100 tahun Menyinari Negeri.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Muhammadiyah 100 tahun Menyinari Negeri</h6>
                         <p class="card-text text-muted small mb-3">M. Raihan Febriansyah</p>
@@ -341,7 +341,7 @@
 
              <div class="col filter-item muhammadiyah ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Muhammadiyah A Reform Movement.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Muhammadiyah A Reform Movement.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Muhammadiyah A Reform Movement</h6>
                         <p class="card-text text-muted small mb-3">Dr. H. Haedar Nashir, M.Si</p>
@@ -353,7 +353,7 @@
 
              <div class="col filter-item muhammadiyah ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Muhammadiyah Istiqomah Membendung Kristenisasi Liberalisasi.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Muhammadiyah Istiqomah Membendung Kristenisasi Liberalisasi.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Muhammadiyah Istiqomah Membendung Kristenisasi Liberalisasi</h6>
                         <p class="card-text text-muted small mb-3">M. Amien Rais</p>
@@ -365,7 +365,7 @@
 
              <div class="col filter-item muhammadiyah ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Muhammadiyah jawa.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Muhammadiyah jawa.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Muhammadiyah jawa</h6>
                         <p class="card-text text-muted small mb-3">Ahmad Najib Burhani</p>
@@ -376,7 +376,7 @@
             
             <div class="col filter-item muhammadiyah ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="SPA Muhammadiyah.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/SPA Muhammadiyah.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">SPA Muhammadiyah</h6>
                         <p class="card-text text-muted small mb-3">Majlis Tabligh PP Muhammadiyah</p>
@@ -387,7 +387,7 @@
 
             <div class="col filter-item muhammadiyah ">
                 <div class="card h-100 book-card shadow-sm">
-                    <img src="Understanding The Ideology of Muhammadiyah.png" class="card-img-top book-cover" alt="Buku 4">
+                    <img src="Images/Understanding The Ideology of Muhammadiyah.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Understanding The Ideology of Muhammadiyah</h6>
                         <p class="card-text text-muted small mb-3">Dr. H. Haedar Nashir, M.Si</p>
@@ -396,6 +396,214 @@
                 </div>
             </div>  
 
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/Aksi Massa.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">Aksi Massa</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1e-6hI29L1h9a-esqADA-G3Cxq8UklCu0/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/Bapak Republik yang dilupakan.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">Bapak Republik yang dilupakan</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1v3Hu-wcLg9U682h5rmqrrvFLN3rjhuF6/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/Dua Wajah DN Aidit.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">Dua Wajah DN Aidit</h6>
+                        <p class="card-text text-muted small mb-3">Tim Buku TEMPO</p>
+                        <a href="https://drive.google.com/file/d/1e-6hI29L1h9a-esqADA-G3Cxq8UklCu0/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/Gerpolek.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">⁠Gerpolek</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1YjCxzN1CO8xoCe0WJoIlRy9iFrizcWjf//preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Aksi Massa.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">Gestok dan kehancuran</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1vkpufwnWccdyfRIcVH6cABf59eGV4Ejr/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/Hikayat Kadiroen.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">⁠Hikayat Kadiroen</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1BTjsQZBrVm7IBzJlkl6l0dyty2bVeHSa/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/kapitalisme.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">⁠Kapitalisme dan Penindasan perempuan</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1oFdwgMBBr1n_oDSjfkxA1dycpYMQ8Krl/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/brumaire.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">⁠brumaire xvii louis bonaperte</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1QlRpjQRvIADaMYsryRJ9MutVcO6E2gm3/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/upah.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">Upah harga dan laba</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1C2N4nv8M541V8WNM-mHd-mLmYBP9CpPT/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/negara.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">Leninisme, negara dan revolusi</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1glSkOVhnh6eaeWlII_B7BVS237VJ0pzo/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Aksi Massa.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">⁠manusia perempuan dan laki laki</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1OfCYUBxPthVwSqDwfSI-rT3PDdCBoyGd/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/marxisme.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">⁠marxisme dan ketuhanan</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1triIChiGPYwucuJHAFI-y2hLmDj8IvqW/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/mentjapai.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">mentjapai Indonesia Merdeka</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1NK2kUIwqKg8KJjMpG_9A7uMHwVx3lhsZ/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/Menuju.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">Menuju Republik Indonesia</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1ubk6vhzPxBeDrZ264qbHQ--1Mu8KU5z9/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/parlemen.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">Parlemen atau soviet</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1ubk6vhzPxBeDrZ264qbHQ--1Mu8KU5z9/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/rencana.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">⁠Rencana ekonomi berjuang</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1_a6iqEdugrrwasqjpn_skr1H_APm5rJa/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/semangat.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">⁠Semangat muda</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1FRySs7Ivv52vApSq6founE5AmI_DwChg/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/rencana.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">Rdkbb Uv</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1abLT4Yk6ZyPJ4XmdCnN0uEVd13eIy25z/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">⁠Tanah hutan dan rakyat</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1h4WUhVA0p7D8jtmWGjph8_lt6cblw2Kv/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
@@ -449,6 +657,35 @@
         }
       }
       element.className = arr1.join(" ");
+    }
+
+    // --- FITUR PENCARIAN BUKU ---
+    function searchBooks() {
+        // 1. Ambil apa yang diketik user
+        var input = document.getElementById("searchInput");
+        var filter = input.value.toUpperCase();
+        
+        // 2. Ambil semua kartu buku
+        var cards = document.getElementsByClassName("book-card");
+        
+        // 3. Cek satu per satu
+        for (var i = 0; i < cards.length; i++) {
+            var title = cards[i].querySelector(".card-title");
+            var author = cards[i].querySelector(".card-text");
+            
+            // Gabungkan Judul + Penulis biar pencarian lebih luas
+            var txtValue = title.textContent + " " + author.textContent;
+            
+            // 4. Kalau cocok tampilkan, kalau tidak sembunyikan
+            // Kita mainkan parentElement (col) karena yang mau di-hidden itu kolomnya
+            var col = cards[i].parentElement; 
+            
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                col.classList.remove("d-none"); // Tampilkan
+            } else {
+                col.classList.add("d-none");    // Sembunyikan
+            }
+        }
     }
 </script>
 
