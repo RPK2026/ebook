@@ -75,7 +75,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Coming Soon</a></li>
             </ul>
         </div>
       </div>
@@ -90,7 +90,10 @@
     <main class="container my-5">
         
         <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
-            <h3 class="fw-bold mb-0 border-start border-4 border-danger ps-3">Daftar Buku</h3>
+            <div class="d-flex align-items-center">
+                <h3 class="fw-bold mb-0 border-start border-4 border-danger ps-3">Daftar Buku</h3>
+                <span id="bookCount" class="badge rounded-pill bg-danger ms-3 shadow-sm">Memuat...</span>
+            </div>
     
              <div class="mt-3 mt-md-0">
                  <input type="text" id="searchInput" onkeyup="searchBooks()" class="form-control rounded-pill px-3" placeholder="Cari buku...">
@@ -103,6 +106,7 @@
             <button class="btn btn-outline-danger" onclick="filterSelection('muhammadiyah')">Muhammadiyah</button>
             <button class="btn btn-outline-danger" onclick="filterSelection('imm')">IMM</button>
             <button class="btn btn-outline-danger" onclick="filterSelection('umum')">Umum</button>
+            <button class="btn btn-outline-danger" onclick="filterSelection('novel')">Novel</button>
         </div>
 
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
@@ -445,7 +449,7 @@
                     <img src="Aksi Massa.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">Gestok dan kehancuran</h6>
-                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <p class="card-text text-muted small mb-3">Anna Mariana</p>
                         <a href="https://drive.google.com/file/d/1vkpufwnWccdyfRIcVH6cABf59eGV4Ejr/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
                     </div>
                 </div>
@@ -456,7 +460,7 @@
                     <img src="Images/Hikayat Kadiroen.png" class="card-img-top book-cover" alt="Buku 4">
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold">⁠Hikayat Kadiroen</h6>
-                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <p class="card-text text-muted small mb-3">Semaoen</p>
                         <a href="https://drive.google.com/file/d/1BTjsQZBrVm7IBzJlkl6l0dyty2bVeHSa/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
                     </div>
                 </div>
@@ -604,90 +608,784 @@
                     </div>
                 </div>
             </div>
+<!-- New -->
+            <div class="col filter-item novel ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/laut.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">⁠LAUT BERCERITA</h6>
+                        <p class="card-text text-muted small mb-3">S. Chudori</p>
+                        <a href="https://drive.google.com/file/d/1QESgzZcSlnUhjU4jIKMuKi8Q2CdV5G8_/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item novel ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/Sarjana.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">KAMI BUKAN (SARJANA) KERTAS</h6>
+                        <p class="card-text text-muted small mb-3">J.S Khairen</p>
+                        <a href="https://drive.google.com/file/d/12IYrGrolTpTiMca3EF3jz9_f7nPCmd_a/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item novel ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/farm.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">ANIMAL FARM</h6>
+                        <p class="card-text text-muted small mb-3">Bakdi Soemanto</p>
+                        <a href="https://drive.google.com/file/d/17w4PclMPphEDGuWc8LFsvsJDYrNMqnaM/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item novel ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/bumi.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">BUMI MANUSIA</h6>
+                        <p class="card-text text-muted small mb-3">Pramoedya Ananta Toer</p>
+                        <a href="https://drive.google.com/file/d/1kkmFVRz3imk9QfkXlXLXmp6e9U_IxiSC/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item novel ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/dompet.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">DOMPET AYAH SEPATU IBU</h6>
+                        <p class="card-text text-muted small mb-3">J.S Khairen</p>
+                        <a href="https://drive.google.com/file/d/1Z-NhvLknY_2zWvJf9Rh9MYIBZnz_ubJY/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item novel ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/nol.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">PEREMPUAN DI TITIK NOL</h6>
+                        <p class="card-text text-muted small mb-3">Mochtar Lubis</p>
+                        <a href="https://drive.google.com/file/d/1qr5jmojBB3hP92R8cRFFvVGa_ppJiQAQ/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item novel ">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/hujan.png" class="card-img-top book-cover" alt="Buku 4">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">HUJAN</h6>
+                        <p class="card-text text-muted small mb-3">Tere Liye</p>
+                        <a href="https://drive.google.com/file/d/1IC-FLgZVPmYdWK6z-BvNJR1JcI1McZlp/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/hegemoni.png" class="card-img-top book-cover" alt="Hegemoni">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">HEGEMONI</h6>
+                        <p class="card-text text-muted small mb-3">Firdaus M. Yunus</p>
+                        <a href="https://drive.google.com/file/d/1Ij_1mmUwUQE61Thr7RYljvtj5N3T0-az/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/ilmu.png" class="card-img-top book-cover" alt="Ilmu Politik Praktis">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">ILMU POLITIK PRAKTIS</h6>
+                        <p class="card-text text-muted small mb-3">Dr. Ja'far Ahmad M.Si</p>
+                        <a href="https://drive.google.com/file/d/1gj2Q_LtwsAxecXC8oFTv06w5iC8elHor/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/hukum.png" class="card-img-top book-cover" alt="Aktivisme Hukum">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">AKTIVISME HUKUM MAHASISWA</h6>
+                        <p class="card-text text-muted small mb-3">Titi Anggraeni</p>
+                        <a href="https://drive.google.com/file/d/18bfiHK40Dg12GY9Eaz69w_4DixMsZf4K/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/gender.png" class="card-img-top book-cover" alt="Analisis Gender">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">ANALISIS GENDER TRANSFORMASI SOSIAL</h6>
+                        <p class="card-text text-muted small mb-3">Mansour Fakih</p>
+                        <a href="https://drive.google.com/file/d/1Xy3ZyHR-CsEynBVNjjLN4fb8xOE62Ktf/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/anar.png" class="card-img-top book-cover" alt="Anarkisme">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">ANARKISME</h6>
+                        <p class="card-text text-muted small mb-3">Sean M. Sheenan</p>
+                        <a href="https://drive.google.com/file/d/1uhP2QTWi4aJGelC4_s-GTELVFQun0xjC/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/atom.png" class="card-img-top book-cover" alt="Atomic Habits">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">ATOMIC HABITS</h6>
+                        <p class="card-text text-muted small mb-3">James Clear</p>
+                        <a href="https://drive.google.com/file/d/1K_z9RXCdGAbmygX3819pbucgEbOAPocz/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/berani.png" class="card-img-top book-cover" alt="Berani Tidak Disukai">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">BERANI TIDAK DISUKAI</h6>
+                        <p class="card-text text-muted small mb-3">Ichiro Kisimi & Fumitake Koga</p>
+                        <a href="https://drive.google.com/file/d/1_4t2c0NdFIv-yv1f49zPTvtR0QcsCm2n/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item novel">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/cantik.png" class="card-img-top book-cover" alt="Cantik Itu Luka">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">CANTIK ITU LUKA</h6>
+                        <p class="card-text text-muted small mb-3">Eka Kurniawan</p>
+                        <a href="https://drive.google.com/file/d/1hSTctkGfrBBjMTRa5oqbfGkFUzYAJwax/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item islam">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tauhid.png" class="card-img-top book-cover" alt="Tauhid">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">TAUHID & PEMBELAJARANNYA</h6>
+                        <p class="card-text text-muted small mb-3">Prof. Sangkot Sirait</p>
+                        <a href="https://drive.google.com/file/d/1iAxqq9JDTYFeA0vgaA3DOa91-3PWgx8l/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/edu.png" class="card-img-top book-cover" alt="Educated">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">EDUCATED (TERDIDIK)</h6>
+                        <p class="card-text text-muted small mb-3">Tara Westover</p>
+                        <a href="https://drive.google.com/file/d/1sV5STyOZJDo0xjvxyJC3wPhacd_-tKVe/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item islam">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/akal.png" class="card-img-top book-cover" alt="Fungsi Akal">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">FUNGSI AKAL DALAM TASAWUF AL-GHAZALI</h6>
+                        <p class="card-text text-muted small mb-3">Asrori, MA</p>
+                        <a href="https://drive.google.com/file/d/1AN6nmMnpkv5I-r64sWX7QPSd2cvn-eYQ/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/hakikat.png" class="card-img-top book-cover" alt="Hakikat Kebenaran">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">HAKIKAT KEBENARAN</h6>
+                        <p class="card-text text-muted small mb-3">F. P Ramsey</p>
+                        <a href="https://drive.google.com/file/d/1gy4NjDpxqgmV5N9r2w4k5nnnCpOC9-Bd/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col filter-item novel">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/jodoh.png" class="card-img-top book-cover" alt="Berjodoh">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">JANGAN-JANGAN KITA BERJODOH</h6>
+                        <p class="card-text text-muted small mb-3">Sobar D. Prabowo</p>
+                        <a href="https://drive.google.com/file/d/1UoOpdX3qLK8K7iFfr71Br45sgST8R_sm/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item novel">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/jatuh.png" class="card-img-top book-cover" alt="Jatuh Cinta">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">JATUH CINTA TAK PERNAH SALAH</h6>
+                        <p class="card-text text-muted small mb-3">@Negriakhirat</p>
+                        <a href="https://drive.google.com/file/d/1do2WN0u_l5LYDwkZfBGMLr-sFLVwXMc7/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item islam">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/ajaib.png" class="card-img-top book-cover" alt="Asmaul Husna">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">KEAJAIBAN ASMAUL HUSNA</h6>
+                        <p class="card-text text-muted small mb-3">Ardi Gunawan</p>
+                        <a href="https://drive.google.com/file/d/1rW1oSuCLNjZBmRTfEx4ukCQD4fyia4uC/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/pimpin.png" class="card-img-top book-cover" alt="Kepemimpinan">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">KEPEMIMPINAN</h6>
+                        <p class="card-text text-muted small mb-3">Ariefah Sundari, dkk.</p>
+                        <a href="https://drive.google.com/file/d/13QuKxw4YRkkrB1oDADpdTDhUtT1PbJE_/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/leader.png" class="card-img-top book-cover" alt="Leaders Eat Last">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">LEADERS EAT LAST</h6>
+                        <p class="card-text text-muted small mb-3">Simon Sinek</p>
+                        <a href="https://drive.google.com/file/d/1Vpdk-O28GuFGlh2pbF09e5NNk2zg4BE3/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Madilog">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">MADILOG</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1j9BpEknwOHGzRwd8mmDAqyRUR_wciVVB/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/madilog.png" class="card-img-top book-cover" alt="Perempuan Terdidik">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">MENJADI PEREMPUAN TERDIDIK</h6>
+                        <p class="card-text text-muted small mb-3">Dr. Wiyatmi</p>
+                        <a href="https://drive.google.com/file/d/1TaEr25P8ncfenKw_tGO4xQSIfeoz1_aI/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item muhammadiyah">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/modul.png" class="card-img-top book-cover" alt="Modul AIK 3">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">MODUL AIK 3</h6>
+                        <p class="card-text text-muted small mb-3">Dr. Mahsun Jayadi, MAg., dkk.</p>
+                        <a href="https://drive.google.com/file/d/1bDEyBbBhdLuu7PcOjb2FOjp7eHQxtCUw/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tentang.png" class="card-img-top book-cover" alt="Das Kapital">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">TENTANG DAS KAPITAL MARX</h6>
+                        <p class="card-text text-muted small mb-3">Frederick Engels</p>
+                        <a href="https://drive.google.com/file/d/1p6_kltzUsWyxsEqDT1BL653xOkwOg2YR/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/pembebas.png" class="card-img-top book-cover" alt="Pembebasan Perempuan">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">PEMBEBASAN PEREMPUAN</h6>
+                        <p class="card-text text-muted small mb-3">Sara M. Evans & Deirde Hogan</p>
+                        <a href="https://drive.google.com/file/d/17p9VvN_DO0OweTLw_QrOw0F5KZBrg6VP/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/karl.png" class="card-img-top book-cover" alt="Pemikiran Marx">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">PEMIKIRAN KARL MARX</h6>
+                        <p class="card-text text-muted small mb-3">Franz Magnis-Suseno</p>
+                        <a href="https://drive.google.com/file/d/1PBNwBnrRK0xdqVYBTG6oqsMfjL1nCPus/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/bebas.png" class="card-img-top book-cover" alt="Pendidikan Membebaskan">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">PENDIDIKAN YANG MEMBEBASKAN</h6>
+                        <p class="card-text text-muted small mb-3">Paulo Freire</p>
+                        <a href="https://drive.google.com/file/d/1gHpnyHrVAq2NTH1Pg2NiYHA3T12wN45f/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/teori.png" class="card-img-top book-cover" alt="Filsafat">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">PENGANTAR TEORI FILSAFAT</h6>
+                        <p class="card-text text-muted small mb-3">Ferry Hidayat</p>
+                        <a href="https://drive.google.com/file/d/1llLeLVZLTzWeD4bRjecSiJB2iuQgQQNg/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Patriarki">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">MASYARAKAT PATRIARKI & GENDER</h6>
+                        <p class="card-text text-muted small mb-3">Lusia Palulungan</p>
+                        <a href="https://drive.google.com/file/d/17dQv5Ows-6KL-MqJQuKHkKCalX5iufFh/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Personal Branding">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">PERSONAL BRANDING</h6>
+                        <p class="card-text text-muted small mb-3">Farco Siswiyanto Raharjo</p>
+                        <a href="https://drive.google.com/file/d/1sgCp-KsBRME5ww5SAd1o8lId82v6zOhT/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item islam">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Qurratul Uyun">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">QURRATUL 'UYUN</h6>
+                        <p class="card-text text-muted small mb-3">Syekh Imam Abu Muhammad</p>
+                        <a href="https://drive.google.com/file/d/1ZwcNiNFfxJh67ExkFDdQY9P1tWtu2-9Z/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Rehat Dulu">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">REHAT DULU</h6>
+                        <p class="card-text text-muted small mb-3">Syahid Muhammad</p>
+                        <a href="https://drive.google.com/file/d/1GxaUAXeG4LedKrz_QIGYkHkYa4LGpBqz/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Retorika">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">RETORIKA SENI BERBICARA</h6>
+                        <p class="card-text text-muted small mb-3">Aristoteles</p>
+                        <a href="https://drive.google.com/file/d/1jTkMSGGQKGgiVa-Z-7Utdd0M4t-kwvU1/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Strategi Transformasi">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">STRATEGI TRANSFORMASI BANGSA 2045</h6>
+                        <p class="card-text text-muted small mb-3">Prabowo Subianto</p>
+                        <a href="https://drive.google.com/file/d/1ZuiKh3OHrr-jfDAspJKj8_5PgLwwXqan/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item novel">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Bagimu Negeri">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">BAGIMU NEGERI MENYEDIAKAN API</h6>
+                        <p class="card-text text-muted small mb-3">Chairil Anwar</p>
+                        <a href="https://drive.google.com/file/d/1UMteoejLjbou0wS8LtLPrtsnxTuz3C6Z/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Homo Deus">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">HOMO DEUS</h6>
+                        <p class="card-text text-muted small mb-3">Yuval Noah Harari</p>
+                        <a href="https://drive.google.com/file/d/1Ob7kW3gN0zizO7NsDMDREYyjjiDhLXSZ/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="How to Argument">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">HOW TO WIN AN ARGUMENT</h6>
+                        <p class="card-text text-muted small mb-3">Marcus Tullius Cicero</p>
+                        <a href="https://drive.google.com/file/d/1as9uUHJxvwMZ97W1x56Jk3mJJmAnKwMn/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Krisis Kebebasan">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">KRISIS KEBEBASAN</h6>
+                        <p class="card-text text-muted small mb-3">Albert Camus</p>
+                        <a href="https://drive.google.com/file/d/1rP3p52K24VTPJV0qticTu1hAf3fIguD5/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item muhammadiyah">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Muhammadiyah Jawa">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">MUHAMMADIYAH JAWA</h6>
+                        <p class="card-text text-muted small mb-3">Ahmad Najib Burhani</p>
+                        <a href="https://drive.google.com/file/d/1cpezvFeIJw4tH1omNVCbZhStdH2IRXfJ/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Political Movements">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">POLITICAL AND SOCIAL MOVEMENTS</h6>
+                        <p class="card-text text-muted small mb-3">Heather M. Campbell, dkk.</p>
+                        <a href="https://drive.google.com/file/d/1aDNUL-ifaQ56UyssxorvN65Ypa7yCT4r/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Power of Habit">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">THE POWER OF HABIT</h6>
+                        <p class="card-text text-muted small mb-3">Charles Duhigg</p>
+                        <a href="https://drive.google.com/file/d/1cEPt7oM3ZdSRGop_FAvuQZ5_uZehypQi/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Bodo Amat">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">SEBUAH SENI BERSIKAP BODO AMAT</h6>
+                        <p class="card-text text-muted small mb-3">Mark Manson</p>
+                        <a href="https://drive.google.com/file/d/1PEydiWCUECYfz7cKVcxkINXEIY_65sqh/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item islam">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Seksologi Islam">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">MENYELAMI RAHASIA SEKSOLOGI ISLAM</h6>
+                        <p class="card-text text-muted small mb-3">K.H Abdullah Fauzi</p>
+                        <a href="https://drive.google.com/file/d/13JFUIdpZQk413-PAz-C2YBT1klQeeLau/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Selesai Diri Sendiri">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">SELESAI DENGAN DIRI SENDIRI</h6>
+                        <p class="card-text text-muted small mb-3">Ahmad Rifa'i Rif'an</p>
+                        <a href="https://drive.google.com/file/d/1IVzGyM_agOvuLGG0HZStXD5rBLbu0bFn/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Seni Memahami Pria">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">SENI MEMAHAMI PRIA</h6>
+                        <p class="card-text text-muted small mb-3">Claudia Sabrina</p>
+                        <a href="https://drive.google.com/file/d/15tBdchw57tyYvd8Wzyy_5H8ZfOlbxjHA/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Seni Berbicara">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">SENI BERBICARA TANPA BIKIN SAKIT HATI</h6>
+                        <p class="card-text text-muted small mb-3">Oh Su Hyang</p>
+                        <a href="https://drive.google.com/file/d/1IzAItnNYts_WR0uIdEzLtL3EWVMgOXgC/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Stoicism">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">STOICISM</h6>
+                        <p class="card-text text-muted small mb-3">Mathew J. Van Natta</p>
+                        <a href="https://drive.google.com/file/d/17DXDTu1oUpS1xKCR3hunpZw03_Fn8AG6/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Aksi Massa">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">AKSI MASSA</h6>
+                        <p class="card-text text-muted small mb-3">Tan Malaka</p>
+                        <a href="https://drive.google.com/file/d/1Mw3WYy8aqUDgixrQnJXQp60esN-IK-Vp/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="48 Laws of Power">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">THE 48 LAWS OF POWER</h6>
+                        <p class="card-text text-muted small mb-3">Robert Greene</p>
+                        <a href="https://drive.google.com/file/d/1v-w2xrwBY-rdU5mT6TaNkFA7jtaASUlv/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item novel">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Tuhan Izinkan Aku Menjadi Pelacur">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">TUHAN IZINKAN AKU MENJADI PELACUR</h6>
+                        <p class="card-text text-muted small mb-3">Muhidin M. Dahlan</p>
+                        <a href="https://drive.google.com/file/d/1czNYaCnVarLaOqUJ3F4FmnIBffOBHZit/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Tuhan Perempuan Pasar">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">TUHAN, PEREMPUAN DAN PASAR</h6>
+                        <p class="card-text text-muted small mb-3">Lailatul Fitriyah</p>
+                        <a href="https://drive.google.com/file/d/1iqUUoCdQTaQtanLNm9i8rZCticlAU9rg/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Who Am I">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">WHO AM I? 3</h6>
+                        <p class="card-text text-muted small mb-3">@PsikologID</p>
+                        <a href="https://drive.google.com/file/d/1Hy74DUK1h7yDaWpp6cM0s7erVGH5_pt5/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Bicara Itu Ada Seninya">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">BICARA ITU ADA SENINYA</h6>
+                        <p class="card-text text-muted small mb-3">Oh Su Syang</p>
+                        <a href="https://drive.google.com/file/d/18nkLryXuKnE6SgdTPHTkfRysjLbZTjk-/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Atomic Habits">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">ATOMIC HABITS</h6>
+                        <p class="card-text text-muted small mb-3">James Clear</p>
+                        <a href="https://drive.google.com/file/d/1wS8z26W8iizi-gwcMQwe4CZ6LfzmWP6k/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item novel">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Dunia Sophie">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">DUNIA SOPHIE</h6>
+                        <p class="card-text text-muted small mb-3">Jostein Gaarder</p>
+                        <a href="https://drive.google.com/file/d/1BK_hS0dkOhLNBZvkU2I0qqicG_dUyITf/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Filosofi Teras">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">FILOSOFI TERAS</h6>
+                        <p class="card-text text-muted small mb-3">Henry Manampiring</p>
+                        <a href="https://drive.google.com/file/d/1RRhiC0zDDahUyLBAdmjHK6wjfWDYQ895/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Law of Attraction">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">LAW OF ATTRACTION</h6>
+                        <p class="card-text text-muted small mb-3">Michael J. Losier</p>
+                        <a href="https://drive.google.com/file/d/1hwubDOGh2ZyId2Tq79Soj0V4zzHibO_6/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Spesialite Obat">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">SPESIALITE OBAT</h6>
+                        <p class="card-text text-muted small mb-3">Apt. Lolita, M.Sc., Ph.D</p>
+                        <a href="https://drive.google.com/file/d/1L_X2qEakPl3H5SWZPqGzGwG3M91qglGE/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="Tak Apa-Apa Tak Sempurna">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">TAK APA-APA TAK SEMPURNA</h6>
+                        <p class="card-text text-muted small mb-3">Brene Brown, Ph.D.</p>
+                        <a href="https://drive.google.com/file/d/1fwt7gPXOLekZ1x3XhacM4ukQoOMBXzyR/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filter-item umum">
+                <div class="card h-100 book-card shadow-sm">
+                    <img src="Images/tanah.png" class="card-img-top book-cover" alt="The Alpha Girl's Guide">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold">THE ALPHA GIRL'S GUIDE</h6>
+                        <p class="card-text text-muted small mb-3">Henry Manampiring</p>
+                        <a href="https://drive.google.com/file/d/1FYA3-RlfSvm-kEFNT41MTYksHRCuXdJj/preview" target="_blank" class="btn btn-read btn-sm mt-auto w-100 rounded-pill">Baca Buku</a>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
     </main>
 
     <script>
+    // Variabel global untuk menyimpan kategori yang sedang aktif
+    var currentCategory = 'all';
+
     function filterSelection(c) {
-      var x, i;
-      x = document.getElementsByClassName("filter-item");
-      if (c == "all") c = "";
+      currentCategory = c; // Simpan kategori saat ini
       
-      // Loop semua buku
-      for (i = 0; i < x.length; i++) {
-        removeClass(x[i], "d-none"); // Munculkan dulu semua
-        if (x[i].className.indexOf(c) == -1) {
-             addClass(x[i], "d-none"); // Sembunyikan yang tidak cocok
-        }
-      }
-      
-      // Update warna tombol aktif
+      // Update tampilan tombol aktif
       var btns = document.getElementsByTagName("button");
-      for (i = 0; i < btns.length; i++) {
+      for (var i = 0; i < btns.length; i++) {
           if(btns[i].hasAttribute('onclick')) {
-            btns[i].classList.remove("btn-danger");
+            btns[i].classList.remove("btn-danger", "active");
             btns[i].classList.add("btn-outline-danger");
-            btns[i].classList.remove("active");
           }
       }
-      // Warnai tombol yang diklik
-      event.target.classList.remove("btn-outline-danger");
-      event.target.classList.add("btn-danger");
-      event.target.classList.add("active");
-    }
-
-    function addClass(element, name) {
-      var arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (var i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      // Pastikan tombol yang diklik ada (untuk menghindari error saat load awal)
+      if(event && event.target) {
+          event.target.classList.remove("btn-outline-danger");
+          event.target.classList.add("btn-danger", "active");
       }
+
+      // Jalankan fungsi display ulang
+      refreshDisplay();
     }
 
-    function removeClass(element, name) {
-      var arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (var i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-          arr1.splice(arr1.indexOf(arr2[i]), 1);     
-        }
-      }
-      element.className = arr1.join(" ");
-    }
-
-    // --- FITUR PENCARIAN BUKU ---
     function searchBooks() {
-        // 1. Ambil apa yang diketik user
+        // Panggil fungsi display ulang setiap mengetik
+        refreshDisplay();
+    }
+
+    // Fungsi utama yang mengatur tampilan dan Menghitung Jumlah
+    function refreshDisplay() {
         var input = document.getElementById("searchInput");
         var filter = input.value.toUpperCase();
-        
-        // 2. Ambil semua kartu buku
         var cards = document.getElementsByClassName("book-card");
-        
-        // 3. Cek satu per satu
+        var visibleCount = 0; // Variabel penampung jumlah buku
+
         for (var i = 0; i < cards.length; i++) {
-            var title = cards[i].querySelector(".card-title");
-            var author = cards[i].querySelector(".card-text");
+            var col = cards[i].parentElement; // Elemen kolom pembungkus
+            var title = cards[i].querySelector(".card-title").textContent;
+            var author = cards[i].querySelector(".card-text").textContent;
+            var txtValue = title + " " + author;
+
+            // Cek 1: Apakah sesuai kategori?
+            var isCategoryMatch = (currentCategory === 'all') || col.classList.contains(currentCategory);
             
-            // Gabungkan Judul + Penulis biar pencarian lebih luas
-            var txtValue = title.textContent + " " + author.textContent;
-            
-            // 4. Kalau cocok tampilkan, kalau tidak sembunyikan
-            // Kita mainkan parentElement (col) karena yang mau di-hidden itu kolomnya
-            var col = cards[i].parentElement; 
-            
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                col.classList.remove("d-none"); // Tampilkan
+            // Cek 2: Apakah sesuai pencarian?
+            var isSearchMatch = txtValue.toUpperCase().indexOf(filter) > -1;
+
+            // Tampilkan HANYA jika lolos KEDUA cek tersebut
+            if (isCategoryMatch && isSearchMatch) {
+                col.classList.remove("d-none");
+                visibleCount++; // Tambahkan hitungan jika buku muncul
             } else {
-                col.classList.add("d-none");    // Sembunyikan
+                col.classList.add("d-none");
             }
         }
+
+        // Update teks pada badge jumlah buku
+        document.getElementById("bookCount").textContent = visibleCount + " Buku";
     }
-</script>
+
+    // Jalankan fungsi ini saat halaman pertama kali dimuat agar jumlah langsung muncul
+    window.onload = function() {
+        refreshDisplay();
+    };
+    </script>
 
     <footer class="bg-dark text-white text-center py-3 mt-auto">
         <div class="container">
